@@ -28,8 +28,33 @@ public class Util {
         }
 
         return l;
-
     }
 
+    public void atualizaLinhas(int colunaPivo, int linhaPivo, int[][] coeficientes){
+        for(int linha = 0; linha < 4; linha++){
+            //System.out.println(" Linha " + linha);
+            double c = coeficientes[linha][colunaPivo];
+            for(int coluna = 0; coluna < 7; coluna++){
+                if(!(linha == linhaPivo)){
+                    //System.out.print(coeficientes[linha][coluna] + " ");
+                    //System.out.print(coeficientes[linha][colunaPivo] + " ");
+                    //System.out.print(coeficientes[linhaPivo][colunaPivo]+ " ");
+
+                    coeficientes[linha][coluna] = (int) (coeficientes[linha][coluna] -( c * coeficientes[linhaPivo][coluna]));
+
+
+                    //System.out.print(coeficientes[linha][coluna] + " \n");
+                }
+            }
+        }
+
+        for(int linha = 0; linha < 4; linha++){
+            for(int coluna = 0; coluna < 7; coluna++){
+                System.out.print(coeficientes[linha][coluna] + " ");
+            }
+            System.out.println("");
+        }
+
+    }
 
 }

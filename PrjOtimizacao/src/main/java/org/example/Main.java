@@ -33,6 +33,9 @@ public class Main {
 
 
 
+        u.atualizaLinhas(coluna, linhaPivo, coeficientes);
+
+
     }
 
     /*
