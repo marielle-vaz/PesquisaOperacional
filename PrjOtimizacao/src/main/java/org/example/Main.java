@@ -22,7 +22,7 @@ public class Main {
         int coluna = u.validaFuncaoOjetivo(coeficientes);
 
         if(coluna == 0){
-            System.out.println("A matriz está otimizada!");
+            System.out.println("A matriz está otimizada  !");
         } else {
             System.out.println("A coluna que possui o menor número é: " + coluna);
         }

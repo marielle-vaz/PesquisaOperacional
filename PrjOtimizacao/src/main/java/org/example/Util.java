@@ -43,7 +43,7 @@ public class Util {
                     coeficientes[linha][coluna] = (int) (coeficientes[linha][coluna] -( c * coeficientes[linhaPivo][coluna]));
 
 
-                    //System.out.print(coeficientes[linha][coluna] + " \n");
+                    //System.out.print(coeficientes[linha][  coluna] + " \n");
                 }
             }
         }
