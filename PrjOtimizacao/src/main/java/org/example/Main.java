@@ -19,8 +19,6 @@ public class Main {
 
         String variaveis[] = {"z", "x1", "x2", "f1", "f2", "f3"};
 
-
-
         int coluna = u.validaFuncaoOjetivo(coeficientes);
 
         if(coluna == 0){
@@ -31,7 +29,9 @@ public class Main {
 
         int linhaPivo = u.obtemLinhaPivo(coluna, coeficientes);
 
-        System.out.println(linhaPivo);
+        System.out.println("Linha pivô: " +linhaPivo);
+
+
 
     }
 

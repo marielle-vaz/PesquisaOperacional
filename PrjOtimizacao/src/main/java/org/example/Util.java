@@ -21,9 +21,8 @@ public class Util {
         for(linha = 1; linha < 4; linha++){
             coeficientes[linha][6] = coeficientes[linha][6] / coeficientes[linha][coluna];
             System.out.println(coeficientes[linha][6]);
-
             if(coeficientes[linha][6] <= menor){
-                menor = coeficientes[linha][coluna];
+                menor = coeficientes[linha][6];
                 l = linha;
             }
         }
