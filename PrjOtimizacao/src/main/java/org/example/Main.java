@@ -1,8 +1,5 @@
 package org.example;
 
-import java.net.StandardSocketOptions;
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -16,25 +13,25 @@ public class Main {
         };
 
         String variaveisBasicas[] = {"z", "f1", "f2", "f3"};
-
         String variaveis[] = {"z", "x1", "x2", "f1", "f2", "f3"};
 
-        int coluna = u.validaFuncaoOjetivo(coeficientes);
 
-        if(coluna == 0){
-            System.out.println("A matriz está otimizada  !");
-        } else {
-            System.out.println("A coluna que possui o menor número é: " + coluna);
+        while( !u.para(coeficientes) ) {
+            int coluna = u.validaFuncaoOjetivo(coeficientes);
+
+            if(coluna == 0){
+                System.out.println("A matriz está otimizada  !");
+            } else {
+                System.out.println("A coluna que possui o menor número é: " + coluna);
+            }
+
+            int linhaPivo = u.obtemLinhaPivo(coluna, coeficientes);
+
+            System.out.println("Linha pivô: " +linhaPivo);
+
+            u.atualizaLinhas(coluna, linhaPivo, coeficientes);
+            u.atualizaSainteEntrante(variaveisBasicas, variaveis, coluna, linhaPivo);
         }
-
-        int linhaPivo = u.obtemLinhaPivo(coluna, coeficientes);
-
-        System.out.println("Linha pivô: " +linhaPivo);
-
-
-
-        u.atualizaLinhas(coluna, linhaPivo, coeficientes);
-
 
     }
 
